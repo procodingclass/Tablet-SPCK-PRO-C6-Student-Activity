@@ -48,8 +48,6 @@ function setup() {
   obstaclesGroup = new Group();
   cloudsGroup = new Group();
 
-  console.log("Hello" + 5);
-
   score = 0;
 }
 
@@ -61,28 +59,60 @@ function draw() {
   if (gameState === PLAY) {
     //move the ground
     ground.velocityX = -4;
+
+    //Update Score when game state PLAY ( Copy the code block from above)
+    //Hint : Checkout step 1 image inside screenshots folder
+
+
+
+    // Add infinte Ground ( Copy the code block from below)
+    //Hint : Checkout step 2 image inside screenshots folder
+
+
+
+    // Trex Jump ( Copy the code block from below)
+    //Hint : Checkout step 3 image inside screenshots folder
+
+
+
+    //spawn the clouds ( Copy the code block from below)
+    //Hint : Checkout step 4 image inside screenshots folder
+
+
+    //Change game state when trex collide with obstacle
+    //Hint : Checkout step 5 image inside screenshots folder
+
+
   } else if (gameState === END) {
     //stop the ground
     ground.velocityX = 0;
+
+    // set obstaclesGroup velocity to 0
+    //Hint : Checkout step 6 image inside screenshots folder
+
+
   }
 
-  if (keyDown("space") && trex.y >= 100) {
-    trex.velocityY = -13;
-  }
-
-  trex.velocityY = trex.velocityY + 0.8;
-
+  // Add infinte Ground
   if (ground.x < 0) {
     ground.x = ground.width / 2;
   }
 
-  trex.collide(invisibleGround);
+  // Trex Jump
+  if (keyDown("space") && trex.y >= 100) {
+    trex.velocityY = -12;
+  }
+
+  //add Gravity
+  trex.velocityY = trex.velocityY + 0.8;
 
   //spawn the clouds
   spawnClouds();
 
   //spawn obstacles on the ground
   spawnObstacles();
+
+  trex.collide(invisibleGround);
 
   drawSprites();
 }
