@@ -53,9 +53,7 @@ function setup() {
 
 function draw() {
   background(180);
-  text("Score: " + score, 500, 50);
-  score = score + Math.round(frameCount / 60);
-
+  
   if (gameState === PLAY) {
     //move the ground
     ground.velocityX = -4;
