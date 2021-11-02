@@ -58,11 +58,7 @@ function draw() {
     //move the ground
     ground.velocityX = -4;
 
-    //Update Score when game state PLAY ( Copy the code block from above)
-    //Hint : Checkout step 1 image inside screenshots folder
-
-
-
+    
     // Add infinte Ground ( Copy the code block from below)
     //Hint : Checkout step 2 image inside screenshots folder
 
